@@ -51,7 +51,7 @@ Resources:
           - - '#!/bin/bash'
             - sudo yum install --enablerepo=epel -y nodejs
             - sudo mkdir week3_files
-            - 'wget https://raw.githubusercontent.com/jorgieo/SWDV-660-1W-20-FA1_OTERO/master/Week%202/helloworld.js -O /home/ec2-user/week3_files/helloworld.js'
+            - 'sudo wget https://raw.githubusercontent.com/jorgieo/SWDV-660-1W-20-FA1_OTERO/master/Week%202/helloworld.js -O /home/ec2-user/week3_files/helloworld.js'
             - 'wget http://bit.ly/2vVvT18 -O /etc/init/helloworld.conf'
             - start helloworld
       Tags: 
