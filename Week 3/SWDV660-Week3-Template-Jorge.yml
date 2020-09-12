@@ -55,6 +55,8 @@ Resources:
             - 'wget http://bit.ly/2vVvT18 -O /etc/init/helloworld.conf'
             - start helloworld
       Tags: 
+        - Key: "Name"
+          Value: "Week3Nano"
         - Key: "InstanceType"
           Value: "T2.nano"
     Type: 'AWS::EC2::Instance'
