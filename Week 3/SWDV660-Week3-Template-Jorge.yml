@@ -23,16 +23,16 @@ Parameters:
 Resources:
   SecurityGroup:
     Properties:
-      GroupDescription: Allow SSH and TCP/3000 access
+      GroupDescription: Allow SSH and TCP/3333 access
       SecurityGroupIngress:
         - CidrIp: 0.0.0.0/0
           FromPort: '22'
           IpProtocol: tcp
           ToPort: '22'
         - CidrIp: 0.0.0.0/0
-          FromPort: '3000'
+          FromPort: '3333'
           IpProtocol: tcp
-          ToPort: '3000'
+          ToPort: '3333'
     Type: 'AWS::EC2::SecurityGroup'
     Metadata:
       'AWS::CloudFormation::Designer':
