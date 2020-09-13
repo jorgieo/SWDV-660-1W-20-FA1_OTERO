@@ -1,4 +1,4 @@
-Description: 'Modified SWDV660 Template by Jorge Otero'
+Description: 'Modified SWDV660 Template by Jorge Otero on 9/12/2020'
 Outputs:
   InstancePublicIp:
     Description: Public IP of our instance.
