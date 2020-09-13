@@ -1,0 +1,34 @@
+---
+# Week 3 Ansible Assignment by Jorge Otero
+- hosts: all
+  tasks: 
+    - name: upgrade all packages
+      yum: name=* state=latest
+
+    - name: install node and npm
+      yum:
+        enablerepo: epel
+        state: installed
+        name:
+          - nodejs
+          - npm
+    
+    - name: copying the application file
+      copy:
+        src: /home/ec2-user/SWD660/helloworld.js
+        dest: /home/ec2-user/
+        owner: ec2-user
+        group: ec2-user
+        mode: 0644
+    
+    - name: copying upstart file
+      copy:
+        src: /home/ec2-user/SWD660/helloword.conf
+        dest: /etc/init/helloworld.conf
+        owner: root
+        group: root
+        mode: 0644
+
+    - name: restart helloworld service
+      service: name=helloworld state=restarted
+      become: yes
