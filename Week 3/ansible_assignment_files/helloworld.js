@@ -8,7 +8,7 @@ http.createServer(function (request, response) {
    response.writeHead(200, {'Content-Type': 'text/plain'})
 
    // Send the response body as "Hello World"
-   response.end('This is an aplication running on AWS!\n')
+   response.end('This server was configured with ANSIBLE!!\n')
 }).listen(3333)
 
 // Console will print the message
