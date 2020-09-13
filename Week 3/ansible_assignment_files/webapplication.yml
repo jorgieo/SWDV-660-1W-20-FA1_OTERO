@@ -1,11 +1,13 @@
 ---
 # Week 3 Ansible Assignment by Jorge Otero
-- hosts: all
+- hosts: webservers
   tasks: 
     - name: upgrade all packages
+      become: yes
       yum: name=* state=latest
 
     - name: install node and npm
+      become: yes
       yum:
         enablerepo: epel
         state: installed
@@ -22,8 +24,9 @@
         mode: 0644
     
     - name: copying upstart file
+      become: yes
       copy:
-        src: /home/ec2-user/SWD660/helloword.conf
+        src: /home/ec2-user/SWD660/helloworld.conf
         dest: /etc/init/helloworld.conf
         owner: root
         group: root
