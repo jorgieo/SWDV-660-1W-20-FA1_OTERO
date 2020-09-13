@@ -52,7 +52,7 @@ Resources:
             - sudo yum install --enablerepo=epel -y nodejs
             - sudo mkdir /home/ec2-user/week3_files
             - 'sudo wget https://raw.githubusercontent.com/jorgieo/SWDV-660-1W-20-FA1_OTERO/master/Week%203/helloworld.js -O /home/ec2-user/week3_files/helloworld.js'
-            - 'wget http://bit.ly/2vVvT18 -O /etc/init/helloworld.conf'
+            - 'wget https://raw.githubusercontent.com/jorgieo/SWDV-660-1W-20-FA1_OTERO/master/Week%203/helloworld.conf -O /etc/init/helloworld.conf'
             - start helloworld
       Tags: 
         - Key: "Name"
